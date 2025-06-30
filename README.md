@@ -16,7 +16,7 @@
 
 5. **Guardar cambios**  
    Haz clic en el botón "Guardar cambios" para aplicar tus configuraciones.  
-   > **Nota:** Por defecto, los cambios solo se muestran en la vista previa y no se guardan de forma permanente.
+   > **Nota:** Por defecto, los cambios solo se muestran en la vista previa y no se guardan de forma permanente. (por ahora)
 
 6. **Recomendación**  
    Usa este panel para personalizar fácilmente tu perfil antes de publicarlo o compartirlo con otros.
