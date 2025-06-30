@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffffff, #e0f0ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #002f5e;
+  margin-top: 20px;
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #0077cc;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-glass {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  backdrop-filter: blur(15px); 
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.icon-glass:hover {
+  transform: scale(1.1);
+}
+
+.icon-glass img {
+  width: 60%;
+}
+
+img[alt="Eros Tun"] {
+  width: 180px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+
