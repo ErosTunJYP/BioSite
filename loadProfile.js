@@ -1,21 +1,21 @@
-// Cambiar imagen de perfil si hay guardada
-const profileImage = localStorage.getItem("profileImage");
-if (profileImage) {
-  const img = document.querySelector('img[alt="Eros Tun"]');
-  if (img) img.src = profileImage;
-}
+fetch('config.json')
+  .then(res => res.json())
+  .then(config => {
+    // Imagen de perfil
+    const img = document.querySelector('img[alt="Eros Tun"]');
+    if (img && config.imagen) img.src = config.imagen;
 
-// Aplicar configuración a cada red
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.social-icons a').forEach(link => {
-    const red = link.dataset.red;
-    const url = localStorage.getItem(`${red}-url`);
-    const enabled = localStorage.getItem(`${red}-enabled`);
-
-    if (enabled === "false") {
-      link.style.display = "none";
-    } else if (url) {
-      link.href = url;
-    }
+    // Redes sociales
+    document.querySelectorAll('.social-icons a').forEach(link => {
+      const red = link.dataset.red;
+      if (!config.redes[red].activo) {
+        link.style.display = "none";
+      } else {
+        link.href = config.redes[red].url;
+      }
+    });
+  })
+  .catch(err => {
+    console.error("No se pudo cargar config.json", err);
   });
-});
+
